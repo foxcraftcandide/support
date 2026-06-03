@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="main-html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Khataba AI</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e91e63;
+            --secondary: #2d3436;
+            --bg: #fdfdfd;
+            --card: #ffffff;
+            --border: #dfe6e9;
+        }
+
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 5px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border: 1px solid var(--border);
+            display: flex;
+        }
+
+        .lang-switcher button {
+            border: none;
+            background: none;
+            padding: 8px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .lang-switcher button.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 20px 40px;
+        }
+
+        .legal-block {
+            background: var(--card);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border);
+        }
+
+        .lang-en {
+            display: none;
+        }
+
+        [lang="en"] .lang-ar {
+            display: none;
+        }
+
+        [lang="en"] .lang-en {
+            display: block;
+        }
+
+        [lang="en"] {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            border-right: 4px solid var(--primary);
+            padding-right: 15px;
+            margin-top: 40px;
+            color: var(--secondary);
+        }
+
+        [lang="en"] h2 {
+            border-right: none;
+            border-left: 4px solid var(--primary);
+            padding-right: 0;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: var(--primary);
+            margin-top: 25px;
+        }
+
+        p,
+        li {
+            text-align: justify;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .warning-box {
+            background: #fff5f5;
+            border: 1px solid #ffc1c1;
+            padding: 25px;
+            border-radius: 12px;
+            color: #c0392b;
+            font-weight: 600;
+            margin: 30px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="lang-switcher">
+        <button id="btn-ar" class="active" onclick="setLang('ar')">العربية</button>
+        <button id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+
+    <div class="container">
+        <div class="legal-block">
+            <!-- Arabic Content -->
+            <div class="lang-ar">
+                <h1>خطابة AI - سياسة الخصوصية</h1>
+                <div class="version" style="text-align: center; color: #888; font-size: 0.8rem; margin-bottom: 20px;">
+                    آخر تحديث: 10 مايو 2026</div>
+                <div class="warning-box">تنبيه قانوني: باستخدامك لتطبيق Khataba AI، فإنك تقر بأن هذا التطبيق هو وسيط
+                    تقني فقط، ولا يتحمل المطور أي مسؤولية عن تصرفات المستخدمين خارج نطاق التطبيق.</div>
+
+                <h2>1. مقدمة وتعريفات</h2>
+                <p>تتم إدارة تطبيق Khataba AI من قبل <strong>EAF microservice</strong>. نهدف من خلال هذه السياسة إلى
+                    حماية المطور والمستخدم عبر توضيح حقوق الالتزام والبيانات.</p>
+
+                <h2>2. البيانات التي يتم جمعها</h2>
+                <ul>
+                    <li><strong>البيانات الشخصية الحساسة:</strong> تشمل الحالة الاجتماعية، السن، المهنة، والمدينة (لغرض
+                        التوفيق الشرعي).</li>
+                    <li><strong>بيانات الهوية الرقمية:</strong> البريد الإلكتروني لأغراض التوثيق والتحقق من الحساب
+                        (Verification).</li>
+                    <li><strong>المحتوى والمراسلات:</strong> يتم تخزين المحادثات بشكل مشفر لضمان أمان الوساطة.</li>
+                </ul>
+
+                <h2>3. إخلاء المسؤولية القانونية</h2>
+                <h3>أ. سلوك المستخدمين</h3>
+                <p>المطور غير مسؤول عن أي أضرار مادية أو معنوية ناتجة عن تفاعل المستخدمين. تقع مسؤولية التحقق من هوية
+                    الطرف الآخر وجديته على عاتق المستخدم وولي أمره.</p>
+                <h3>ب. عدم ضمان النتائج</h3>
+                <p>التطبيق يوفر أدوات للتوفيق بناءً على البيانات المدخلة، ولا يضمن نجاح عملية الزواج أو دقة البيانات
+                    المقدمة من المستخدمين الآخرين.</p>
+
+                <h2>4. حماية ومشاركة البيانات</h2>
+                <p>نحن نلتزم بعدم بيع أو مشاركة بياناتكم مع أي أطراف ثالثة لأغراض دعائية. يتم الكشف عن البيانات فقط في
+                    الحالات القضائية أو لحماية السلامة العامة.</p>
+
+                <h2>5. حقوق المستخدم</h2>
+                <ul>
+                    <li><strong>الوصول إلى البيانات:</strong> الحق في طلب نسخة من البيانات الشخصية التي نجمعها عنك.</li>
+                    <li><strong>التصحيح والتحديث:</strong> الحق في تعديل أي معلومات غير دقيقة أو ناقصة في ملفك الشخصي.
+                    </li>
+                    <li><strong>حذف البيانات:</strong> الحق في طلب حذف حسابك وجميع بياناتك المتعلقة به نهائياً في أي
+                        وقت.</li>
+                    <li><strong>سحب الموافقة:</strong> الحق في سحب موافقتك على معالجة بياناتك، وهو ما قد يؤدي لتوقف
+                        الخدمة.</li>
+                    <li><strong>التحكم في الظهور:</strong> الحق في إخفاء ملفك الشخصي أو تقييد ظهوره للمستخدمين الآخرين.
+                    </li>
+                </ul>
+                <h2>6. التواصل والدعم</h2>
+                <p>إذا كان لديك أي أسئلة أو كنت بحاجة إلى مساعدة، يمكنك التواصل مع فريق الدعم الفني عبر الرابط التالي:
+                </p>
+                <p style="text-align: center;"><a href="https://eaf-microservice.github.io/support/"
+                        style="color: var(--primary); font-weight: bold; text-decoration: none; border-bottom: 2px solid var(--primary);">مركز
+                        دعم المطور</a></p>
+            </div>
+
+            <!-- English Content (Direct Translation) -->
+            <div class="lang-en">
+                <h1>Khataba AI - Privacy Policy</h1>
+                <div class="version" style="text-align: center; color: #888; font-size: 0.8rem; margin-bottom: 20px;">
+                    Last Updated: May 10, 2026</div>
+                <div class="warning-box">Legal Disclaimer: By using Khataba AI, you acknowledge that this application is
+                    a technical intermediary only. The developer assumes no liability for user conduct or outcomes
+                    outside the platform.</div>
+
+                <h2>1. Introduction & Definitions</h2>
+                <p>Khataba AI is managed by <strong>EAF microservice</strong>. This policy aims to protect both the
+                    Developer and the User by clarifying obligations and data rights.</p>
+
+                <h2>2. Information Collection</h2>
+                <ul>
+                    <li><strong>Sensitive Personal Data:</strong> Includes marital status, age, profession, and city
+                        (solely for Sharia matchmaking purposes).</li>
+                    <li><strong>Digital Identity Data:</strong> Email address for account authentication and
+                        verification purposes.</li>
+                    <li><strong>Content & Communications:</strong> Messages are stored using encryption to ensure the
+                        safety of the mediation process.</li>
+                </ul>
+
+                <h2>3. Legal Disclaimer</h2>
+                <h3>A. User Conduct</h3>
+                <p>The Developer is not liable for any material or moral damages resulting from user interactions. The
+                    responsibility for verifying the identity and seriousness of the other party lies with the User and
+                    their legal guardian.</p>
+                <h3>B. No Guarantee of Results</h3>
+                <p>The application provides tools for matching based on entered data; it does not guarantee the success
+                    of the marriage process or the accuracy of data provided by other users.</p>
+
+                <h2>4. Data Protection & Sharing</h2>
+                <p>We are committed to not selling or sharing your data with third parties for advertising purposes.
+                    Data is disclosed only in legal cases or to protect public safety.</p>
+
+                <h2>5. User Rights</h2>
+                <ul>
+                    <li><strong>Data Access:</strong> The right to request a copy of the personal data we collect about
+                        you.</li>
+                    <li><strong>Rectification:</strong> The right to correct or update any inaccurate or incomplete
+                        information in your profile.</li>
+                    <li><strong>Data Erasure:</strong> The right to request the permanent deletion of your account and
+                        all associated data at any time.</li>
+                    <li><strong>Withdrawal of Consent:</strong> The right to withdraw your consent for data processing,
+                        which may result in service discontinuation.</li>
+                    <li><strong>Visibility Control:</strong> The right to hide your profile or restrict its visibility
+                        to other users.</li>
+                </ul>
+                <h2>6. Contact & Support</h2>
+                <p>If you have any questions or need assistance, you can contact our support team via the following
+                    link:</p>
+                <p style="text-align: center;"><a href="https://eaf-microservice.github.io/support/"
+                        style="color: var(--primary); font-weight: bold; text-decoration: none; border-bottom: 2px solid var(--primary);">Developer
+                        Support Center</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2026 EAF microservice. All rights reserved.</footer>
+
+    <script>
+        function setLang(lang) {
+            const html = document.getElementById('main-html');
+            html.setAttribute('lang', lang);
+            html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+    </script>
+
+</body>
+
+</html>

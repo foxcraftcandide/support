@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية | تطبيق كتاب الطالب</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Tajawal:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #3b82f6;
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #60a5fa;
+            --success: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 5rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container svg {
+            width: 80px;
+            height: 80px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .policy-content {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 4rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2::before {
+            content: '';
+            width: 6px;
+            height: 28px;
+            background: var(--primary-color);
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-main);
+            opacity: 0.85;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            padding-right: 2rem;
+            position: relative;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1rem 2rem 1rem 1rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        li:hover {
+            transform: translateX(-5px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        li::after {
+            content: '✓';
+            position: absolute;
+            right: 0.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .service-link {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .service-link:hover {
+            color: #fff;
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 5rem;
+            padding-bottom: 3rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-card {
+            background: linear-gradient(145deg, rgba(37, 99, 235, 0.1), rgba(96, 165, 250, 0.05));
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            text-align: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item svg {
+            color: var(--accent);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .policy-content {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 6.00019L21 3.00019V17.0002L12 21.0002L3 17.0002V3.00019L12 6.00019Z" stroke="#60a5fa"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 6V21" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M7 8L10 9" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M7 11L10 12" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M7 14L10 15" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </div>
+            <h1>سياسة الخصوصية | تطبيق كتاب الطالب</h1>
+            <p class="last-updated">آخر تحديث: 17 أبريل 2026</p>
+        </header>
+
+        <main class="policy-content">
+            <section>
+                <h2>المقدمة والالتزام</h2>
+                <p>قام <strong>EAF Microservice</strong> بتطوير تطبيق "<strong>كتاب الطالب</strong>" كخدمة مجانية شاملة.
+                    صُمم هذا التطبيق لدعم المسيرة التعليمية لطلاب جامعة صفوة، ونحن نلتزم بحماية خصوصيتك وضمان أمن
+                    بياناتك أثناء استخدامك لخدماتنا.</p>
+                <p>توضح هذه الوثيقة ماهية المعلومات التي نجمعها، وكيفية استخدامها، والتدابير التي نتخذها لحمايتك.</p>
+            </section>
+
+            <section>
+                <h2>جمع المعلومات واستخدامها</h2>
+                <p>لتقديم أفضل تجربة تعليمية ممكنة، قد نقوم بجمع معلومات معينة لتحسين أداء التطبيق. نستخدم خدمات تابعة
+                    لأطراف ثالثة موثوقة تلتزم بمعايير خصوصية صارمة:</p>
+                <ul>
+                    <li>
+                        <strong>Google Play Services:</strong>
+                        لضمان عمل الوظائف الأساسية لنظام أندرويد بشكل صحيح.
+                        <a class="service-link" href="https://www.google.com/policies/privacy/" target="_blank">رابط
+                            السياسة</a>
+                    </li>
+                    <li>
+                        <strong>AdMob:</strong>
+                        لعرض إعلانات ذات صلة تدعم استمرارية التطبيق المجاني.
+                        <a class="service-link" href="https://support.google.com/admob/answer/6128543?hl=en"
+                            target="_blank">رابط السياسة</a>
+                    </li>
+                    <!-- <li>
+                        <strong>Google Analytics for Firebase:</strong>
+                        لفهم كيفية تفاعل المستخدمين مع التطبيق وتحديد مجالات التحسين.
+                        <a class="service-link" href="https://firebase.google.com/policies/analytics"
+                            target="_blank">رابط السياسة</a>
+                    </li> -->
+                </ul>
+            </section>
+
+            <section>
+                <h2>بيانات السجل والأخطاء</h2>
+                <p>في حال حدوث خطأ تقني غير متوقع، يقوم التطبيق تلقائياً بجمع "بيانات السجل" (Log Data). تتضمن هذه
+                    البيانات معلومات تقنية مثل نوع الجهاز، إصدار النظام، وساعة حدوث الخطأ. نستخدم هذه المعلومات حصرياً
+                    لإصلاح الأعطال البرمجية وضمان استقرار التطبيق.</p>
+            </section>
+
+            <section>
+                <h2>ملفات تعريف الارتباط (Cookies)</h2>
+                <p>التطبيق لا يستخدم "الكوكيز" بشكل مباشر. ومع ذلك، قد تستخدم خدمات الطرف الثالث (مثل AdMob) تقنيات
+                    مشابهة لتقديم إعلانات مخصصة. يمكنك إدارة تفضيلات الإعلانات من خلال إعدادات جهازك الشخصي.</p>
+            </section>
+
+            <section>
+                <h2>أمن البيانات</h2>
+                <p>نحن نطبق بروتوكولات أمنية متقدمة لحماية معلوماتك. ومع ذلك، نود التنويه إلى أنه لا توجد وسيلة نقل
+                    إلكترونية آمنة بنسبة 100% في العالم الرقمي، لكننا نبذل أقصى جهودنا باستخدام أحدث التقنيات المتاحة.
+                </p>
+            </section>
+
+            <section>
+                <h2>حماية خصوصية الأطفال</h2>
+                <p>نحن ندرك أهمية حماية الأطفال. لا يستهدف تطبيقنا الأطفال دون سن 13 عاماً، ولا نقوم عمداً بجمع أي
+                    بيانات منهم. إذا كنت ولي أمر واكتشفت أن طفلك قد قدم لنا بيانات، يرجى التواصل معنا لنقوم بحذفها
+                    فوراً.</p>
+            </section>
+
+            <section>
+                <h2>التواصل معنا</h2>
+                <p>نحن هنا للإجابة على أي استفسارات تتعلق بخصوصيتك. يمكنك التواصل مع فريق الدعم الفني لدينا:</p>
+
+                <div class="contact-card">
+                    <div class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        <strong>البريد الإلكتروني:</strong> eaf.microservice@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2=22 y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                        <strong>الموقع الرسمي:</strong> https://eaf-microservice.netlify.app/
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy;
+                <script>document.write(new Date().getFullYear());</script> EAF Microservice. جميع الحقوق محفوظة لتطبيق
+                كتاب الطالب.
+            </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

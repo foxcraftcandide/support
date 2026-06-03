@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية - كناش الكريدي (Carnet Credit)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #001e40;
+            --secondary-color: #006c48;
+            --text-color: #333;
+            --bg-color: #f8fafb;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; }
+        h2 { color: var(--primary-color); margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; padding-right: 20px; }
+        li { margin-bottom: 8px; }
+
+        .highlight-box {
+            background-color: #e3f2fd;
+            border-right: 5px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .contact-info {
+            background-color: #f1f8e9;
+            border-right: 5px solid var(--secondary-color);
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 20px; padding: 20px; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>كناش الكريدي - Carnet Credit 🛒</h1>
+        <p>سياسة الخصوصية لمستخدمي التطبيق</p>
+    </header>
+
+    <div class="container">
+        <p>تاريخ التحديث: 26 مارس 2026</p>
+
+        <section>
+            <h2>1. مقدمة</h2>
+            <p>نحن في "كناش الكريدي" (Carnet Credit)، المطور بواسطة <strong>Fouad El Azbi (EAF microservice)</strong>، نلتزم بحماية خصوصيتك وضمان أمان بياناتك. توضح هذه السياسة كيف نقوم بجمع واستخدام وحماية المعلومات الخاصة بك عند استخدام تطبيقنا.</p>
+        </section>
+
+        <section>
+            <h2>2. المعلومات التي نجمعها</h2>
+            <p>لكي يعمل التطبيق بشكل صحيح ويوفر تجربة سلسة بين التاجر والزبون، نقوم بجمع البيانات التالية:</p>
+            <ul>
+                <li><strong>بيانات الهوية:</strong> الاسم الكامل، واللقب (nickname) الذي يحدده التاجر للزبون.</li>
+                <li><strong>بيانات التواصل:</strong> البريد الإلكتروني (لتسجيل الدخول) ورقم الهاتف (اختياري، للتواصل بين البائع والمشتري).</li>
+                <li><strong>بيانات الموقع:</strong> العنوان (اختياري) لمساعدة التجار في معرفة نطاق عملهم.</li>
+                <li><strong>بيانات الحساب:</strong> صورة الملف الشخصي (عند التسجيل عبر جوجل).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. كيف نستخدم معلوماتك</h2>
+            <p>نستخدم البيانات التي نجمعها للأغراض التالية:</p>
+            <ul>
+                <li>إدارة وتتبع الديون (الكريدي) بين التاجر والزبون بشكل دقيق.</li>
+                <li>إرسال روابط تفعيل الحساب وتأمين الدخول (عبر Google Firebase).</li>
+                <li>تمكين المشتري من رؤية رصيده لدى المتاجر المختلفة التي يتعامل معها.</li>
+                <li>توفير ميزة التحويل للعرض بين "الدرهم" و "الريال" حسب تفضيل كل مستخدم.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. خدمات الطرف الثالث</h2>
+            <p>يستخدم تطبيقنا خدمات الأطراف الثالثة التالية التي قد تجمع معلومات لتعريفك:</p>
+            <ul>
+                <li><strong>Firebase Authentication:</strong> لتأمين الدخول والتحقق من الهوية.</li>
+                <li><strong>Cloud Firestore:</strong> لتخزين بيانات المشتريات والديون بشكل لحظي وآمن.</li>
+                <li><strong>Google Sign-In:</strong> لتسهيل عملية التسجيل والوصول للحساب.</li>
+                <li><strong>Google AdMob:</strong> قد يتم عرض إعلانات داخل التطبيق لدعم استمرارية الخدمة المجانية.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. الكاميرا والأذونات</h2>
+            <p>يطلب التطبيق الوصول إلى <strong>الكاميرا</strong> لغرض واحد فقط وهو <strong>مسح رمز QR</strong> للربط بين الزبون والمتجر. لا يتم التقاط أو تخزين أي صور أو فيديوهات خارج هذا النطاق.</p>
+        </section>
+
+        <section>
+            <h2>6. مشاركة البيانات</h2>
+            <p>نحن <strong>لا نبيع ولا نشارك</strong> بياناتك الشخصية مع أي جهات خارجية لأغراض تسويقية. البيانات الوحيدة التي تظهر هي بياناتك (مثل الاسم والديون) للطرف الآخر في العملية التجارية (التاجر الذي تتعامل معه).</p>
+        </section>
+
+        <section>
+            <h2>7. حقوق المستخدم</h2>
+            <p>لديك الحق الكامل في:</p>
+            <ul>
+                <li>الوصول إلى جميع بياناتك المسجلة وتعديلها.</li>
+                <li>إلغاء تنشيط حسابك في أي وقت.</li>
+                <li>طلب حذف بياناتك الشخصية من خوادمنا.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>8. التواصل معنا</h2>
+            <div class="contact-info">
+                <p>إذا كان لديك أي استفسار حول سياسة الخصوصية، يمكنك التواصل معنا عبر البريد الإلكتروني:</p>
+                <p><strong>EAF.microservice@gmail.com</strong></p>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <p>All rights reserved &copy; <script>document.write(new Date().getFullYear());</script> Carnet Credit - Fouad El Azbi (EAF microservice).</p>
+    </div>
+
+</body>
+</html>
