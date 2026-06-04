@@ -74,7 +74,7 @@
             font-weight: 700;
             margin-bottom: 1rem;
             background: linear-gradient(to right, #fff, var(--accent));
-            -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -131,18 +131,20 @@
         }
 
         li {
-            margin-bottom: 1rem;
-            padding-right: 2rem;
+            margin-bottom: 1.2rem;
+            padding-right: 2.5rem;
             position: relative;
-            background: rgba(255, 255, 255, 0.03);
-            padding: 1rem 2rem 1rem 1rem;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 1rem 2.5rem 1rem 1rem;
             border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             transition: transform 0.3s ease;
+            color: var(--text-main);
         }
 
         li:hover {
             transform: translateX(-5px);
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.18);
         }
 
         li::after {
@@ -160,6 +162,12 @@
             text-decoration: none;
             transition: all 0.3s ease;
             font-weight: 500;
+            display: inline-block;
+            margin-right: 0.6rem;
+            margin-top: 0.4rem;
+            padding: 0.2rem 0.6rem;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            border-radius: 6px;
         }
 
         .service-link:hover {
