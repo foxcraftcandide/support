@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Hifd Quran</title>
+  <meta name="description"
+    content="Privacy Policy for the Hifd Quran mobile application. Learn how we handle your data." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: #0D5C46;
+      --primary-light: #16a085;
+      --bg: #f8faf9;
+      --surface: #ffffff;
+      --text: #1a2e26;
+      --muted: #5a7a6e;
+      --border: #d4e8df;
+      --accent: #e8f5f0;
+      --radius: 12px;
+      --max-width: 780px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #1a7a5e 100%);
+      color: #fff;
+      padding: 60px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+      pointer-events: none;
+    }
+
+    .header-icon {
+      font-size: 52px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.85;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-top: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── Summary Cards ── */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+
+    .summary-card:hover {
+      box-shadow: 0 4px 20px rgba(13, 92, 70, 0.1);
+    }
+
+    .summary-card .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .summary-card strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .summary-card span {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* ── Sections ── */
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2 .num {
+      background: var(--accent);
+      color: var(--primary);
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    section p {
+      margin-bottom: 12px;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    section p:last-child {
+      margin-bottom: 0;
+    }
+
+    section ul {
+      padding-left: 20px;
+    }
+
+    section ul li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    section ul li::marker {
+      color: var(--primary-light);
+    }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: var(--accent);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.93rem;
+    }
+
+    .highlight strong {
+      color: var(--primary);
+    }
+
+    /* ── Contact ── */
+    .contact-box {
+      background: linear-gradient(135deg, var(--primary) 0%, #1a7a5e 100%);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+
+    .contact-box h2 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-box p {
+      opacity: 0.9;
+      font-size: 0.95rem;
+    }
+
+    .contact-box a {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px 24px;
+      margin-top: 16px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .contact-box a:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Arabic note ── */
+    .arabic-note {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.1rem;
+      text-align: center;
+      color: var(--primary);
+      padding: 16px;
+      border-top: 1px dashed var(--border);
+      margin-top: 16px;
+      direction: rtl;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 24px 18px;
+      }
+
+      header {
+        padding: 40px 16px 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <span class="header-icon">📖</span>
+    <h1>Privacy Policy</h1>
+    <p>Hifd Quran — حِفْظ القرآن</p>
+    <span class="badge">Last updated: June 2025</span>
+  </header>
+
+  <main>
+
+    <!-- Summary Cards -->
+    <div class="summary-grid">
+      <div class="summary-card">
+        <span class="icon">🚫</span>
+        <strong>No Data Collected</strong>
+        <span>We collect zero personal information</span>
+      </div>
+      <div class="summary-card">
+        <span class="icon">📵</span>
+        <strong>Works Offline</strong>
+        <span>No internet connection required</span>
+      </div>
+      <div class="summary-card">
+        <span class="icon">📱</span>
+        <strong>On-Device Only</strong>
+        <span>All data stays on your device</span>
+      </div>
+      <div class="summary-card">
+        <span class="icon">🆓</span>
+        <strong>No Ads</strong>
+        <span>No advertising or tracking SDKs</span>
+      </div>
+    </div>
+
+    <!-- 1 -->
+    <section>
+      <h2><span class="num">1</span> Overview</h2>
+      <p>
+        <strong>Hifd Quran</strong> ("the App", "we", "our") is a free, open-source Quran memorization application
+        developed for Android and iOS. This Privacy Policy explains what information — if any — is collected when you
+        use the App and how it is handled.
+      </p>
+      <div class="highlight">
+        <strong>Short version:</strong> We do not collect, store, or transmit any personal data. The App is fully
+        offline and requires no account or registration.
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section>
+      <h2><span class="num">2</span> Information We Collect</h2>
+      <p>The App does <strong>not</strong> collect any of the following:</p>
+      <ul>
+        <li>Personal identifiers (name, email, phone number)</li>
+        <li>Location data</li>
+        <li>Device identifiers (IMEI, advertising ID)</li>
+        <li>Usage analytics or crash reports sent to a server</li>
+        <li>Contacts, camera, or microphone data</li>
+      </ul>
+      <p>
+        All user preferences — such as your memorization plan, progress, selected language, font settings, and review
+        day — are stored <strong>locally on your device</strong> using Android/iOS SharedPreferences. This data never
+        leaves your device.
+      </p>
+    </section>
+
+    <!-- 3 -->
+    <section>
+      <h2><span class="num">3</span> Local Data Storage</h2>
+      <p>The App stores the following data <strong>only on your device</strong>:</p>
+      <ul>
+        <li>Memorization plan type and duration</li>
+        <li>Current task index and overall progress</li>
+        <li>Daily streak counter</li>
+        <li>Weekly review day preference</li>
+        <li>Ramadan mode setting</li>
+        <li>Selected Quran edition / language</li>
+        <li>Font family and font size preferences</li>
+        <li>Dark mode preference</li>
+      </ul>
+      <p>You can delete all of this data at any time by using the "Reset Plan" option in Settings, or by uninstalling
+        the App.</p>
+    </section>
+
+    <!-- 4 -->
+    <section>
+      <h2><span class="num">4</span> Internet &amp; Permissions</h2>
+      <p>The App does <strong>not</strong> require an internet connection to function. All Quran text, translations, and
+        fonts are bundled within the App at install time.</p>
+      <p>The App does <strong>not</strong> request the following sensitive Android/iOS permissions:</p>
+      <ul>
+        <li>Location (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION)</li>
+        <li>Camera (CAMERA)</li>
+        <li>Microphone (RECORD_AUDIO)</li>
+        <li>Contacts (READ_CONTACTS)</li>
+        <li>Phone state (READ_PHONE_STATE)</li>
+      </ul>
+    </section>
+
+    <!-- 5 -->
+    <section>
+      <h2><span class="num">5</span> Third-Party Services</h2>
+      <p>The App does <strong>not</strong> integrate any third-party services that collect data, including:</p>
+      <ul>
+        <li>No Google Analytics / Firebase Analytics</li>
+        <li>No Facebook SDK</li>
+        <li>No advertising networks (AdMob, etc.)</li>
+        <li>No crash reporting services (Sentry, Crashlytics, etc.)</li>
+      </ul>
+      <p>The App is distributed via the Google Play Store. Google may collect certain technical information as part of
+        the distribution process — please review <a href="https://policies.google.com/privacy" target="_blank"
+          rel="noopener">Google's Privacy Policy</a> for details.</p>
+    </section>
+
+    <!-- 6 -->
+    <section>
+      <h2><span class="num">6</span> Children's Privacy</h2>
+      <p>
+        The App is suitable for all ages, including children under 13. Because we collect no personal information
+        whatsoever, there is nothing to disclose under COPPA (Children's Online Privacy Protection Act) or similar
+        regulations.
+      </p>
+    </section>
+
+    <!-- 7 -->
+    <section>
+      <h2><span class="num">7</span> Data Security</h2>
+      <p>
+        Since all data is stored locally on your device, its security depends on your device's own security measures
+        (screen lock, encryption, etc.). We recommend keeping your operating system up to date to ensure your data
+        remains protected.
+      </p>
+    </section>
+
+    <!-- 8 -->
+    <section>
+      <h2><span class="num">8</span> Open Source</h2>
+      <p>
+        The source code of Hifd Quran is open source and licensed under the Creative Commons Attribution-ShareAlike 4.0
+        International License. You can inspect the full codebase to verify these privacy claims independently.
+      </p>
+      <div class="highlight">
+        Source code is available on GitHub. The <strong>Quran text and translations</strong> used in the App are in the
+        public domain or licensed under permissive open licenses.
+      </div>
+
+      <div class="arabic-note">
+        ﴿ وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ ﴾ — القمر: ١٧
+      </div>
+    </section>
+
+    <!-- 9 -->
+    <section>
+      <h2><span class="num">9</span> Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Any changes will be reflected by updating the "Last
+        updated" date at the top of this page. For significant changes, we will update the App's store listing
+        description.
+      </p>
+      <p>
+        Continued use of the App after any changes constitutes your acceptance of the new policy.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <div class="contact-box">
+      <h2>📬 Questions?</h2>
+      <p>If you have any questions about this Privacy Policy or the App, please reach out via the Google Play Store
+        listing or open an issue on GitHub.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.foxcraftcandide.hifd_quran" target="_blank"
+        rel="noopener">View on Google Play</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>©
+      <script>document.write(new Date().getFullYear());</script> Hifd Quran · <a href="https://github.com/foxcraftcandide/hifd_quran_helper/blob/main/LICENSE.txt">CC BY-SA 4.0
+        License</a> · Built with ❤️ for the Muslim community
+    </p>
+  </footer>
+
+</body>
+
+</html>
