@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - القرآن الكريم (Holy Quran App)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        body.rtl {
+            direction: rtl;
+        }
+        
+        body.ltr {
+            direction: ltr;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .lang-btn {
+            padding: 8px 20px;
+            border: 2px solid #00897b;
+            background: white;
+            color: #00897b;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        
+        .lang-btn:hover {
+            background: #e0f2f1;
+        }
+        
+        .lang-btn.active {
+            background: #00897b;
+            color: white;
+        }
+        
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        h1 {
+            color: #00897b;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+            border-bottom: 3px solid #00897b;
+            padding-bottom: 20px;
+        }
+        
+        h2 {
+            color: #00695c;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        body.rtl h2 {
+            padding-right: 15px;
+            border-right: 4px solid #00897b;
+        }
+        
+        body.ltr h2 {
+            padding-left: 15px;
+            border-left: 4px solid #00897b;
+        }
+        
+        h3 {
+            color: #004d40;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1.1em;
+        }
+        
+        ul, ol {
+            margin-bottom: 15px;
+        }
+        
+        body.rtl ul, body.rtl ol {
+            margin-right: 30px;
+        }
+        
+        body.ltr ul, body.ltr ol {
+            margin-left: 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        
+        .highlight {
+            background-color: #e0f2f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        body.rtl .highlight {
+            border-right: 4px solid #00897b;
+        }
+        
+        body.ltr .highlight {
+            border-left: 4px solid #00897b;
+        }
+        
+        .last-updated {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .contact-info {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .arabic-text {
+            font-family: 'Arial', 'Tahoma', sans-serif;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .language-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+            }
+            
+            .lang-btn {
+                padding: 6px 15px;
+                font-size: 12px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body class="ltr" id="body">
+    <div class="language-toggle">
+        <button class="lang-btn active" id="btn-en" onclick="switchLanguage('en')">English</button>
+        <button class="lang-btn" id="btn-ar" onclick="switchLanguage('ar')">العربية</button>
+    </div>
+    
+    <div class="container">
+        <!-- English Content -->
+        <div class="lang-content active" id="content-en">
+            <h1>Privacy Policy</h1>
+            
+            <div class="highlight">
+                <p><strong>Last Updated:</strong> <span id="currentDate"></span></p>
+            </div>
+            
+            <p>
+                This Privacy Policy describes how the <strong>القرآن الكريم (Holy Quran App)</strong> 
+                ("we", "our", or "the App") handles your information. We are committed to protecting 
+                your privacy and ensuring a secure experience while using our application.
+            </p>
+            
+            <h2>1. Information We Collect</h2>
+            
+            <h3>1.1 Local Data Storage</h3>
+            <p>
+                Our app operates <strong>completely offline</strong> and stores all data locally on your device. 
+                We do not collect, transmit, or store any personal information on external servers.
+            </p>
+            
+            <p>The following data is stored locally on your device:</p>
+            
+            <ul>
+                <li><strong>Bookmarks:</strong> Page numbers you bookmark for quick access</li>
+                <li><strong>Last Read Page:</strong> The page number where you last stopped reading</li>
+                <li><strong>App Preferences:</strong> Your theme preference (light/dark mode) and reading mode (normal/tajweed)</li>
+            </ul>
+            
+            <h3>1.2 No Personal Information</h3>
+            <p>
+                We do <strong>NOT</strong> collect, store, or transmit:
+            </p>
+            
+            <ul>
+                <li>Your name, email address, or contact information</li>
+                <li>Location data</li>
+                <li>Device identifiers or unique IDs</li>
+                <li>Usage analytics or tracking data</li>
+                <li>Any data to third-party services</li>
+            </ul>
+            
+            <h2>2. How We Use Your Information</h2>
+            
+            <p>
+                All data stored locally is used <strong>exclusively</strong> to enhance your reading experience:
+            </p>
+            
+            <ul>
+                <li>To remember your bookmarks and allow quick navigation</li>
+                <li>To resume reading from where you left off</li>
+                <li>To maintain your preferred app settings (theme, reading mode)</li>
+            </ul>
+            
+            <h2>3. Data Storage and Security</h2>
+            
+            <h3>3.1 Local Storage</h3>
+            <p>
+                All data is stored locally on your device using <strong>SharedPreferences</strong>, 
+                which is a standard Android/iOS local storage mechanism. This data:
+            </p>
+            
+            <ul>
+                <li>Remains on your device only</li>
+                <li>Is never transmitted over the internet</li>
+                <li>Is not accessible by other apps (unless you explicitly share it)</li>
+                <li>Can be deleted by uninstalling the app</li>
+            </ul>
+            
+            <h3>3.2 Data Deletion</h3>
+            <p>
+                You can delete your data at any time by:
+            </p>
+            
+            <ul>
+                <li>Using the "Reset" and "Clear" options in the Settings screen</li>
+                <li>Uninstalling the app (this will remove all local data)</li>
+            </ul>
+            
+            <h2>4. Permissions</h2>
+            
+            <p>Our app requests the following permissions:</p>
+            
+            <h3>4.1 Wake Lock Permission</h3>
+            <p>
+                <strong>Purpose:</strong> To keep your screen awake while reading, preventing the screen 
+                from turning off during your reading session.
+            </p>
+            <p>
+                <strong>Data Access:</strong> This permission does not access any personal data. 
+                It only controls the device's screen behavior.
+            </p>
+            
+            <h2>5. Third-Party Services</h2>
+            
+            <div class="highlight">
+                <p>
+                    <strong>We do NOT use any third-party services, analytics, advertising, or tracking tools.</strong>
+                </p>
+            </div>
+            
+            <p>The app uses the following open-source libraries:</p>
+            
+            <ul>
+                <li><strong>shared_preferences:</strong> For local data storage (Flutter plugin)</li>
+                <li><strong>wakelock_plus:</strong> For screen wake lock functionality (Flutter plugin)</li>
+            </ul>
+            
+            <p>
+                These libraries are standard Flutter plugins and do not collect or transmit any data.
+            </p>
+            
+            <h2>6. Children's Privacy</h2>
+            
+            <p>
+                Our app is suitable for users of all ages. Since we do not collect any personal information, 
+                there are no special privacy concerns for children. All data remains on the device.
+            </p>
+            
+            <h2>7. Changes to This Privacy Policy</h2>
+            
+            <p>
+                We may update this Privacy Policy from time to time. Any changes will be posted on this page 
+                with an updated "Last Updated" date. We encourage you to review this policy periodically.
+            </p>
+            
+            <h2>8. Your Rights</h2>
+            
+            <p>You have the following rights regarding your data:</p>
+            
+            <ul>
+                <li><strong>Access:</strong> All your data is stored locally and accessible through the app settings</li>
+                <li><strong>Delete:</strong> You can delete your bookmarks and reset preferences at any time</li>
+                <li><strong>Control:</strong> You have full control over all data stored by the app</li>
+            </ul>
+            
+            <h2>9. Contact Us</h2>
+            
+            <div class="contact-info">
+                <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                
+                <p><strong>Developer:</strong> Fouad El Azbi</p>
+                <p><strong>App Name:</strong> القرآن الكريم (Holy Quran App)</p>
+                <p><strong>Version:</strong> 1.0.1</p>
+            </div>
+            
+            <div class="highlight">
+                <p>
+                    <strong>Summary:</strong> This app is completely offline, stores all data locally on your device, 
+                    and does not collect, transmit, or share any personal information with anyone.
+                </p>
+            </div>
+            
+            <div class="last-updated">
+                <p>© 2026 Holy Quran App - Fouad El Azbi. All rights reserved.</p>
+            </div>
+        </div>
+        
+        <!-- Arabic Content -->
+        <div class="lang-content" id="content-ar">
+            <h1 class="arabic-text">سياسة الخصوصية</h1>
+            
+            <div class="highlight">
+                <p class="arabic-text"><strong>آخر تحديث:</strong> <span id="currentDateAr"></span></p>
+            </div>
+            
+            <p class="arabic-text">
+                تصف سياسة الخصوصية هذه كيفية تعامل تطبيق <strong>القرآن الكريم</strong> 
+                ("نحن" أو "التطبيق") مع معلوماتك. نحن ملتزمون بحماية خصوصيتك وضمان تجربة آمنة أثناء استخدام التطبيق.
+            </p>
+            
+            <h2 class="arabic-text">1. المعلومات التي نجمعها</h2>
+            
+            <h3 class="arabic-text">1.1 تخزين البيانات محلياً</h3>
+            <p class="arabic-text">
+                يعمل تطبيقنا <strong>بشكل كامل دون اتصال بالإنترنت</strong> ويخزن جميع البيانات محلياً على جهازك. 
+                لا نجمع أو ننقل أو نخزن أي معلومات شخصية على خوادم خارجية.
+            </p>
+            
+            <p class="arabic-text">يتم تخزين البيانات التالية محلياً على جهازك:</p>
+            
+            <ul class="arabic-text">
+                <li><strong>الإشارات المرجعية:</strong> أرقام الصفحات التي تقوم بوضع علامة عليها للوصول السريع</li>
+                <li><strong>آخر صفحة مقروءة:</strong> رقم الصفحة التي توقفت عندها آخر مرة</li>
+                <li><strong>تفضيلات التطبيق:</strong> تفضيلاتك للوضع (فاتح/ليلي) ووضع القراءة (عادي/تجويدي)</li>
+            </ul>
+            
+            <h3 class="arabic-text">1.2 لا معلومات شخصية</h3>
+            <p class="arabic-text">
+                نحن <strong>لا</strong> نجمع أو نخزن أو ننقل:
+            </p>
+            
+            <ul class="arabic-text">
+                <li>اسمك أو عنوان بريدك الإلكتروني أو معلومات الاتصال</li>
+                <li>بيانات الموقع</li>
+                <li>معرفات الجهاز أو المعرفات الفريدة</li>
+                <li>تحليلات الاستخدام أو بيانات التتبع</li>
+                <li>أي بيانات إلى خدمات طرف ثالث</li>
+            </ul>
+            
+            <h2 class="arabic-text">2. كيفية استخدام معلوماتك</h2>
+            
+            <p class="arabic-text">
+                جميع البيانات المخزنة محلياً تُستخدم <strong>حصرياً</strong> لتحسين تجربة القراءة:
+            </p>
+            
+            <ul class="arabic-text">
+                <li>لتذكر إشاراتك المرجعية والسماح بالتنقل السريع</li>
+                <li>لاستئناف القراءة من حيث توقفت</li>
+                <li>للحفاظ على إعدادات التطبيق المفضلة لديك (الوضع، وضع القراءة)</li>
+            </ul>
+            
+            <h2 class="arabic-text">3. تخزين البيانات والأمان</h2>
+            
+            <h3 class="arabic-text">3.1 التخزين المحلي</h3>
+            <p class="arabic-text">
+                يتم تخزين جميع البيانات محلياً على جهازك باستخدام <strong>SharedPreferences</strong>، 
+                وهي آلية تخزين محلية قياسية لنظامي Android/iOS. هذه البيانات:
+            </p>
+            
+            <ul class="arabic-text">
+                <li>تبقى على جهازك فقط</li>
+                <li>لا يتم نقلها عبر الإنترنت أبداً</li>
+                <li>لا يمكن للتطبيقات الأخرى الوصول إليها (ما لم تشاركها صراحة)</li>
+                <li>يمكن حذفها بإلغاء تثبيت التطبيق</li>
+            </ul>
+            
+            <h3 class="arabic-text">3.2 حذف البيانات</h3>
+            <p class="arabic-text">
+                يمكنك حذف بياناتك في أي وقت عن طريق:
+            </p>
+            
+            <ul class="arabic-text">
+                <li>استخدام خيارات "إعادة تعيين" و"حذف" في شاشة الإعدادات</li>
+                <li>إلغاء تثبيت التطبيق (سيؤدي هذا إلى إزالة جميع البيانات المحلية)</li>
+            </ul>
+            
+            <h2 class="arabic-text">4. الأذونات</h2>
+            
+            <p class="arabic-text">يطلب تطبيقنا الأذونات التالية:</p>
+            
+            <h3 class="arabic-text">4.1 إذن إبقاء الشاشة مضاءة</h3>
+            <p class="arabic-text">
+                <strong>الغرض:</strong> لإبقاء الشاشة مضاءة أثناء القراءة، ومنع إطفاء الشاشة أثناء جلسة القراءة.
+            </p>
+            <p class="arabic-text">
+                <strong>الوصول إلى البيانات:</strong> هذا الإذن لا يصل إلى أي بيانات شخصية. 
+                يتحكم فقط في سلوك شاشة الجهاز.
+            </p>
+            
+            <h2 class="arabic-text">5. خدمات الطرف الثالث</h2>
+            
+            <div class="highlight">
+                <p class="arabic-text">
+                    <strong>نحن لا نستخدم أي خدمات طرف ثالث أو تحليلات أو إعلانات أو أدوات تتبع.</strong>
+                </p>
+            </div>
+            
+            <p class="arabic-text">يستخدم التطبيق المكتبات مفتوحة المصدر التالية:</p>
+            
+            <ul class="arabic-text">
+                <li><strong>shared_preferences:</strong> لتخزين البيانات محلياً (إضافة Flutter)</li>
+                <li><strong>wakelock_plus:</strong> لوظيفة إبقاء الشاشة مضاءة (إضافة Flutter)</li>
+            </ul>
+            
+            <p class="arabic-text">
+                هذه المكتبات هي إضافات Flutter قياسية ولا تجمع أو تنقل أي بيانات.
+            </p>
+            
+            <h2 class="arabic-text">6. خصوصية الأطفال</h2>
+            
+            <p class="arabic-text">
+                تطبيقنا مناسب للمستخدمين من جميع الأعمار. نظراً لأننا لا نجمع أي معلومات شخصية، 
+                لا توجد مخاوف خصوصية خاصة للأطفال. تبقى جميع البيانات على الجهاز.
+            </p>
+            
+            <h2 class="arabic-text">7. تغييرات سياسة الخصوصية</h2>
+            
+            <p class="arabic-text">
+                قد نحدث سياسة الخصوصية هذه من وقت لآخر. سيتم نشر أي تغييرات على هذه الصفحة 
+                مع تحديث تاريخ "آخر تحديث". نشجعك على مراجعة هذه السياسة بشكل دوري.
+            </p>
+            
+            <h2 class="arabic-text">8. حقوقك</h2>
+            
+            <p class="arabic-text">لديك الحقوق التالية فيما يتعلق ببياناتك:</p>
+            
+            <ul class="arabic-text">
+                <li><strong>الوصول:</strong> جميع بياناتك مخزنة محلياً ويمكن الوصول إليها من خلال إعدادات التطبيق</li>
+                <li><strong>الحذف:</strong> يمكنك حذف إشاراتك المرجعية وإعادة تعيين التفضيلات في أي وقت</li>
+                <li><strong>التحكم:</strong> لديك سيطرة كاملة على جميع البيانات المخزنة بواسطة التطبيق</li>
+            </ul>
+            
+            <h2 class="arabic-text">9. اتصل بنا</h2>
+            
+            <div class="contact-info">
+                <p class="arabic-text">إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا:</p>
+                
+                <p class="arabic-text"><strong>المطور:</strong> فؤاد الأزبي</p>
+                <p class="arabic-text"><strong>اسم التطبيق:</strong> القرآن الكريم</p>
+                <p class="arabic-text"><strong>الإصدار:</strong> 1.0.1</p>
+            </div>
+            
+            <div class="highlight">
+                <p class="arabic-text">
+                    <strong>ملخص:</strong> هذا التطبيق يعمل بالكامل دون اتصال بالإنترنت، ويخزن جميع البيانات محلياً على جهازك، 
+                    ولا يجمع أو ينقل أو يشارك أي معلومات شخصية مع أي شخص.
+                </p>
+            </div>
+            
+            <div class="last-updated">
+                <p class="arabic-text">© 2026 تطبيق القرآن الكريم - فؤاد العزبي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Set current date
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const dateStr = now.toLocaleDateString('en-US', options);
+        const dateStrAr = now.toLocaleDateString('ar-SA', options);
+        
+        document.getElementById('currentDate').textContent = dateStr;
+        document.getElementById('currentDateAr').textContent = dateStrAr;
+        
+        // Language switching function
+        function switchLanguage(lang) {
+            const body = document.getElementById('body');
+            const contentEn = document.getElementById('content-en');
+            const contentAr = document.getElementById('content-ar');
+            const btnEn = document.getElementById('btn-en');
+            const btnAr = document.getElementById('btn-ar');
+            
+            if (lang === 'en') {
+                body.className = 'ltr';
+                contentEn.classList.add('active');
+                contentAr.classList.remove('active');
+                btnEn.classList.add('active');
+                btnAr.classList.remove('active');
+            } else {
+                body.className = 'rtl';
+                contentEn.classList.remove('active');
+                contentAr.classList.add('active');
+                btnEn.classList.remove('active');
+                btnAr.classList.add('active');
+            }
+        }
+        
+        // Load saved language preference from localStorage
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('privacyPolicyLang') || 'en';
+            switchLanguage(savedLang);
+        });
+        
+        // Save language preference
+        const originalSwitchLanguage = switchLanguage;
+        switchLanguage = function(lang) {
+            originalSwitchLanguage(lang);
+            localStorage.setItem('privacyPolicyLang', lang);
+        };
+    </script>
+</body>
+</html>
