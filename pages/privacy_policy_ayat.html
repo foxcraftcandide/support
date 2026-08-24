@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Ayat (آيات)</title>
+    <style>
+      :root {
+        --primary-color: #2e7d32;
+        --bg-color: #f5f5f5;
+        --text-color: #333;
+        --card-bg: #fff;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        margin: 0;
+        padding: 0;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+      }
+      body.dark-mode {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --card-bg: #1e1e1e;
+      }
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: var(--card-bg);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 0.5rem;
+        margin-top: 2rem;
+      }
+      .theme-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .theme-toggle:hover {
+        transform: scale(1.1);
+      }
+      footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.9rem;
+        color: #666;
+      }
+      @media (max-width: 768px) {
+        .container {
+          margin: 1rem;
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Privacy Policy</h1>
+      <p>Ayat (آيات)</p>
+    </header>
+
+    <div class="container">
+      <p><strong>Effective Date:</strong> <span id="current-date"></span></p>
+
+      <p>
+        Welcome to <strong>Ayat (آيات)</strong>. This privacy policy explains
+        how we handle your data when you use our application. We have built Ayat
+        with privacy as a core principle.
+      </p>
+
+      <h2>1. Data Collection and Usage</h2>
+      <p>
+        <strong
+          >Ayat does not collect, store, or share any personal
+          information.</strong
+        >
+      </p>
+      <p>
+        The app operates <strong>100% offline</strong> and does not request or
+        require internet permission. All your data, including custom Hadiths you
+        add, Dhikr counters, and settings, are stored locally on your device and
+        are never transmitted to any external servers.
+      </p>
+
+      <h2>2. Permissions Requested</h2>
+      <p>
+        To provide its core features, Ayat requires the following device
+        permissions. None of these permissions are used to collect data:
+      </p>
+      <ul>
+        <li>
+          <strong>Display over other apps (SYSTEM_ALERT_WINDOW):</strong>
+          Required exclusively for the "Floating Dhikr" feature so the overlay
+          can appear above other applications.
+        </li>
+        <li>
+          <strong>Notifications (POST_NOTIFICATIONS):</strong> Required by
+          Android to run the floating overlay continuously as a foreground
+          service.
+        </li>
+        <li>
+          <strong>Run at startup (RECEIVE_BOOT_COMPLETED):</strong> Required to
+          automatically refresh the home-screen widget and restart background
+          tasks when you reboot your phone.
+        </li>
+      </ul>
+
+      <h2>3. Third-Party Services</h2>
+      <p>
+        We do not integrate any third-party analytics, tracking, or advertising
+        SDKs. Because the app has absolutely no internet access, it is
+        impossible for any data to be sent to third parties.
+      </p>
+
+      <h2>4. Changes to This Privacy Policy</h2>
+      <p>
+        We may update our Privacy Policy from time to time. We will notify you
+        of any changes by updating this page. Since the app is offline, any
+        changes to our privacy practices would only apply if accompanied by an
+        app update.
+      </p>
+
+      <h2>5. Contact Us</h2>
+      <p>
+        If you have any questions or suggestions about our Privacy Policy,
+        please feel free to contact us via the Google Play Store developer
+        contact information.
+      </p>
+    </div>
+
+    <footer>
+      &copy; <span id="current-year"></span> Ayat (آيات) App. All rights
+      reserved.
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+      🌙
+    </button>
+
+    <script>
+      // Set dynamic dates
+      document.getElementById("current-date").textContent =
+        new Date().toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // Dark mode toggle functionality
+      const themeToggleBtn = document.getElementById("themeToggle");
+      const body = document.body;
+
+      // Check for saved user preference
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        themeToggleBtn.textContent = "☀️";
+      }
+
+      themeToggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+          themeToggleBtn.textContent = "☀️";
+        } else {
+          localStorage.setItem("theme", "light");
+          themeToggleBtn.textContent = "🌙";
+        }
+      });
+    </script>
+  </body>
+</html>
