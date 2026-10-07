@@ -1,4 +1,4 @@
-Copyright (c) 2026 - FoxCraftCandide
+Copyright (c) 2026 - EAF microservice
 
 All rights reserved.
 

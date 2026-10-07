@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Carnet is a credit-book and product-list manager that works 100% offline. This Privacy Policy explains what information the App accesses, how it is used, and the security measures in place to protect it."
+    />
+    <meta
+      name="keywords"
+      content="Carnet, Privacy Policy, Credit Book, List Manager, Offline App, Data Privacy, EAF microservice"
+    />
+    <meta name="author" content="Fouad El Azbi" />
+
+    <title>Carnet – Privacy Policy</title>
+
+    <!-- ─── Fonts ─── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ═══════════════════════════════════════════
+       RESET & TOKENS
+    ═══════════════════════════════════════════ */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --clr-bg: #0f0f13;
+        --clr-surface: #1a1a22;
+        --clr-surface2: #22222e;
+        --clr-border: #2e2e3e;
+        --clr-accent: #7c6ef0;
+        --clr-accent2: #5b8af5;
+        --clr-text: #e4e4ef;
+        --clr-muted: #8888a8;
+        --clr-safe: #3ecf8e;
+        --clr-safe-bg: #0d2b1f;
+
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-lg: 20px;
+
+        --shadow: 0 4px 32px rgba(0, 0, 0, 0.45);
+        --glow: 0 0 60px rgba(124, 110, 240, 0.12);
+
+        --font: "Inter", system-ui, sans-serif;
+        --max-w: 780px;
+      }
+
+      /* ═══════════════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════════════ */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font);
+        background: var(--clr-bg);
+        color: var(--clr-text);
+        min-height: 100vh;
+        line-height: 1.7;
+        padding: 0 1rem 4rem;
+      }
+
+      /* ─── hero header ─── */
+      .hero {
+        max-width: var(--max-w);
+        margin: 0 auto;
+        padding: 3.5rem 0 2.5rem;
+        text-align: center;
+      }
+
+      .hero-icon {
+        width: 76px;
+        height: 76px;
+        border-radius: var(--radius-md);
+        background: linear-gradient(
+          135deg,
+          var(--clr-accent),
+          var(--clr-accent2)
+        );
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        box-shadow: 0 8px 32px rgba(124, 110, 240, 0.4);
+        margin-bottom: 1.25rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.8rem, 5vw, 2.6rem);
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+
+      .hero h1 span {
+        background: linear-gradient(
+          90deg,
+          var(--clr-accent),
+          var(--clr-accent2)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-sub {
+        color: var(--clr-muted);
+        margin-top: 0.5rem;
+        font-size: 0.95rem;
+      }
+
+      .badge-safe {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        background: var(--clr-safe-bg);
+        color: var(--clr-safe);
+        border: 1px solid rgba(62, 207, 142, 0.25);
+        border-radius: 999px;
+        padding: 0.35rem 0.9rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+        margin-top: 1.25rem;
+        letter-spacing: 0.3px;
+      }
+
+      .badge-safe svg {
+        flex-shrink: 0;
+      }
+
+      /* ─── divider ─── */
+      .divider {
+        max-width: var(--max-w);
+        margin: 0 auto 2rem;
+        border: none;
+        border-top: 1px solid var(--clr-border);
+      }
+
+      /* ─── TOC ─── */
+      .toc {
+        max-width: var(--max-w);
+        margin: 0 auto 2rem;
+        background: var(--clr-surface);
+        border: 1px solid var(--clr-border);
+        border-radius: var(--radius-md);
+        padding: 1.25rem 1.5rem;
+      }
+
+      .toc-title {
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: var(--clr-muted);
+        margin-bottom: 0.75rem;
+      }
+
+      .toc ol {
+        padding-left: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .toc a {
+        color: var(--clr-accent);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .toc a:hover {
+        color: var(--clr-accent2);
+        text-decoration: underline;
+      }
+
+      /* ─── sections ─── */
+      main {
+        max-width: var(--max-w);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .card {
+        background: var(--clr-surface);
+        border: 1px solid var(--clr-border);
+        border-radius: var(--radius-md);
+        padding: 1.75rem 1.75rem 1.5rem;
+        transition:
+          border-color 0.25s,
+          box-shadow 0.25s;
+      }
+
+      .card:hover {
+        border-color: rgba(124, 110, 240, 0.35);
+        box-shadow: 0 0 0 3px rgba(124, 110, 240, 0.07);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .card-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: var(--radius-sm);
+        background: var(--clr-surface2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.15rem;
+        flex-shrink: 0;
+      }
+
+      .card h2 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+      }
+
+      .card p,
+      .card li {
+        color: var(--clr-muted);
+        font-size: 0.935rem;
+      }
+
+      .card ul,
+      .card ol {
+        padding-left: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        margin-top: 0.5rem;
+      }
+
+      .card ul li::marker {
+        color: var(--clr-accent);
+      }
+
+      /* ─── highlight box ─── */
+      .highlight {
+        background: var(--clr-safe-bg);
+        border: 1px solid rgba(62, 207, 142, 0.22);
+        border-radius: var(--radius-sm);
+        padding: 1rem 1.1rem;
+        color: var(--clr-safe) !important;
+        font-size: 0.9rem !important;
+        font-weight: 500;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        margin-top: 0.75rem;
+      }
+
+      .highlight svg {
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      /* ─── table ─── */
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 0.75rem;
+        font-size: 0.9rem;
+      }
+
+      .data-table th {
+        background: var(--clr-surface2);
+        color: var(--clr-text);
+        font-weight: 600;
+        padding: 0.6rem 0.9rem;
+        text-align: left;
+        border: 1px solid var(--clr-border);
+      }
+
+      .data-table td {
+        color: var(--clr-muted);
+        padding: 0.55rem 0.9rem;
+        border: 1px solid var(--clr-border);
+        vertical-align: top;
+      }
+
+      .data-table tr:nth-child(even) td {
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      /* ─── pill tag ─── */
+      .tag {
+        display: inline-block;
+        background: rgba(124, 110, 240, 0.15);
+        color: var(--clr-accent);
+        border-radius: 999px;
+        padding: 0.15rem 0.65rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+      }
+
+      /* ─── contact card ─── */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 0.75rem;
+        margin-top: 0.75rem;
+      }
+
+      .contact-item {
+        background: var(--clr-surface2);
+        border: 1px solid var(--clr-border);
+        border-radius: var(--radius-sm);
+        padding: 0.85rem 1rem;
+      }
+
+      .contact-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--clr-muted);
+        margin-bottom: 0.25rem;
+      }
+
+      .contact-value {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--clr-text);
+        word-break: break-all;
+      }
+
+      .contact-value a {
+        color: var(--clr-accent2);
+        text-decoration: none;
+      }
+
+      .contact-value a:hover {
+        text-decoration: underline;
+      }
+
+      /* ─── footer ─── */
+      footer {
+        max-width: var(--max-w);
+        margin: 2.5rem auto 0;
+        text-align: center;
+        color: var(--clr-muted);
+        font-size: 0.82rem;
+      }
+
+      footer a {
+        color: var(--clr-accent);
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* ─── lang switcher ─── */
+      .lang-bar {
+        max-width: var(--max-w);
+        margin: 1rem auto 0;
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+      }
+
+      .lang-btn {
+        background: var(--clr-surface);
+        color: var(--clr-muted);
+        border: 1px solid var(--clr-border);
+        border-radius: 999px;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+        font-family: var(--font);
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .lang-btn:hover,
+      .lang-btn.active {
+        background: var(--clr-accent);
+        color: #fff;
+        border-color: var(--clr-accent);
+      }
+
+      /* ─── RTL support ─── */
+      [lang="ar"] {
+        direction: rtl;
+        text-align: right;
+      }
+      [lang="ar"] .toc ol,
+      [lang="ar"] .card ul,
+      [lang="ar"] .card ol {
+        padding-left: 0;
+        padding-right: 1.3rem;
+      }
+      [lang="ar"] .lang-bar {
+        justify-content: flex-start;
+      }
+      [lang="ar"] .badge-safe {
+        flex-direction: row-reverse;
+      }
+
+      /* ─── responsive ─── */
+      @media (max-width: 500px) {
+        .card {
+          padding: 1.25rem 1.1rem 1.1rem;
+        }
+        .toc {
+          padding: 1rem 1.1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ─── Language Bar ─── -->
+    <div class="lang-bar">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+    </div>
+
+    <!-- ─── Hero ─── -->
+    <header class="hero">
+      <div class="hero-icon" aria-hidden="true">📒</div>
+      <h1 id="pp-title">Privacy Policy – <span>Carnet</span></h1>
+      <p class="hero-sub" id="pp-subtitle">
+        Credit Book &amp; List Manager · by EAF microservice
+      </p>
+      <div class="badge-safe">
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+        <span id="pp-badge">100 % Offline · No data collected</span>
+      </div>
+    </header>
+
+    <hr class="divider" />
+
+    <!-- ─── TOC ─── -->
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc-title" id="toc-label">Contents</p>
+      <ol id="toc-list">
+        <li><a href="#s1">Overview</a></li>
+        <li><a href="#s2">Information We Collect</a></li>
+        <li><a href="#s3">How Your Data Is Stored</a></li>
+        <li><a href="#s4">Permissions</a></li>
+        <li><a href="#s5">Third-Party Services</a></li>
+        <li><a href="#s6">Children's Privacy</a></li>
+        <li><a href="#s7">Your Rights</a></li>
+        <li><a href="#s8">Changes to This Policy</a></li>
+        <li><a href="#s9">Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <!-- ─── Sections ─── -->
+    <main>
+      <!-- 1. Overview -->
+      <section class="card" id="s1">
+        <div class="card-header">
+          <div class="card-icon">🛡️</div>
+          <h2 id="s1-title">1. Overview</h2>
+        </div>
+        <p id="s1-body">
+          <strong>Carnet</strong> ("the App") is a credit-book and product-list
+          manager built for shop owners and individuals. Your privacy is of
+          utmost importance to us. This Privacy Policy explains what information
+          the App accesses, how it is used, and the security measures in place
+          to protect it.
+        </p>
+        <p
+          id="s1-eff"
+          style="
+            margin-top: 0.65rem;
+            font-size: 0.85rem;
+            color: var(--clr-muted);
+          "
+        >
+          <strong>Effective date:</strong> August 23 2026 &nbsp;|&nbsp;
+          <strong>Version:</strong> 0.0.1
+        </p>
+      </section>
+
+      <!-- 2. Information Collected -->
+      <section class="card" id="s2">
+        <div class="card-header">
+          <div class="card-icon">🔍</div>
+          <h2 id="s2-title">2. Information We Collect</h2>
+        </div>
+        <div class="highlight">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          <span id="s2-highlight"
+            >We do <strong>not</strong> collect, transmit, or share any personal
+            information. Carnet works 100 % offline and never connects to the
+            internet.</span
+          >
+        </div>
+        <p style="margin-top: 0.85rem" id="s2-body">
+          The only data the App creates is the content <em>you</em> enter:
+        </p>
+        <ul id="s2-list">
+          <li>Client / credit list names you create</li>
+          <li>Product names and prices you enter inside lists</li>
+          <li>App language preference (English, Français, or العربية)</li>
+        </ul>
+        <p style="margin-top: 0.75rem" id="s2-note">
+          All of this data is stored
+          <strong>exclusively on your device</strong> and is never transmitted
+          to any server.
+        </p>
+
+        <table class="data-table" aria-label="Data types">
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Collected?</th>
+              <th>Where Stored</th>
+              <th>Shared?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>List &amp; product names / prices</td>
+              <td><span class="tag">Local only</span></td>
+              <td>SQLite on device</td>
+              <td>Never</td>
+            </tr>
+            <tr>
+              <td>Language preference</td>
+              <td><span class="tag">Local only</span></td>
+              <td>SharedPreferences</td>
+              <td>Never</td>
+            </tr>
+            <tr>
+              <td>Personal identifiers (name, email…)</td>
+              <td>Not collected</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Location</td>
+              <td>Not collected</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Device identifiers / telemetry</td>
+              <td>Not collected</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Financial / payment data</td>
+              <td>Not collected</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 3. Storage -->
+      <section class="card" id="s3">
+        <div class="card-header">
+          <div class="card-icon">💾</div>
+          <h2 id="s3-title">3. How Your Data Is Stored</h2>
+        </div>
+        <p id="s3-body">Carnet uses two on-device storage mechanisms:</p>
+        <ul id="s3-list">
+          <li>
+            <strong>SQLite database (sqflite)</strong> – stores your credit
+            lists and product entries inside the App's private sandbox. No other
+            app can access this data.
+          </li>
+          <li>
+            <strong>SharedPreferences</strong> – stores your selected language
+            preference as a simple key-value pair.
+          </li>
+        </ul>
+        <p style="margin-top: 0.75rem" id="s3-note">
+          Both are protected by Android's standard app isolation. Uninstalling
+          the App permanently deletes all data from your device.
+        </p>
+      </section>
+
+      <!-- 4. Permissions -->
+      <section class="card" id="s4">
+        <div class="card-header">
+          <div class="card-icon">🔑</div>
+          <h2 id="s4-title">4. App Permissions</h2>
+        </div>
+        <p id="s4-body">
+          Carnet requests <strong>no special Android permissions</strong>. It
+          does not ask for access to:
+        </p>
+        <ul id="s4-list">
+          <li>Camera, microphone, or contacts</li>
+          <li>Location (GPS or network-based)</li>
+          <li>Storage / media files</li>
+          <li>Internet / network connectivity</li>
+          <li>Notifications</li>
+        </ul>
+      </section>
+
+      <!-- 5. Third Parties -->
+      <section class="card" id="s5">
+        <div class="card-header">
+          <div class="card-icon">🔗</div>
+          <h2 id="s5-title">5. Third-Party Services</h2>
+        </div>
+        <p id="s5-body">
+          Carnet integrates
+          <strong
+            >no third-party SDKs, analytics tools, advertising networks, or
+            crash-reporting services</strong
+          >. The App uses only these open-source Flutter packages, all of which
+          operate entirely on-device:
+        </p>
+        <ul id="s5-list">
+          <li><strong>sqflite</strong> – local SQLite database</li>
+          <li>
+            <strong>shared_preferences</strong> – lightweight local key-value
+            store
+          </li>
+          <li>
+            <strong>provider</strong> – in-memory state management (no I/O)
+          </li>
+          <li>
+            <strong>animated_splash_screen</strong> – splash animation (UI only)
+          </li>
+        </ul>
+      </section>
+
+      <!-- 6. Children -->
+      <section class="card" id="s6">
+        <div class="card-header">
+          <div class="card-icon">👶</div>
+          <h2 id="s6-title">6. Children's Privacy</h2>
+        </div>
+        <p id="s6-body">
+          Carnet does not knowingly collect any data from or about children
+          under the age of 13 (or the applicable age of digital consent in your
+          jurisdiction). Because no data is collected at all, the App is safe
+          for users of any age.
+        </p>
+      </section>
+
+      <!-- 7. Your Rights -->
+      <section class="card" id="s7">
+        <div class="card-header">
+          <div class="card-icon">⚖️</div>
+          <h2 id="s7-title">7. Your Rights</h2>
+        </div>
+        <p id="s7-body">
+          Because all data resides solely on your device, you have full and
+          direct control:
+        </p>
+        <ul id="s7-list">
+          <li>
+            <strong>Access &amp; export</strong> – your data is stored in the
+            App's private SQLite file on your device.
+          </li>
+          <li>
+            <strong>Deletion</strong> – delete individual lists/products inside
+            the App, or uninstall it to erase everything.
+          </li>
+          <li>
+            <strong>Portability</strong> – root-access backups or Android's
+            "Back up my data" option may include the App's data.
+          </li>
+        </ul>
+        <p style="margin-top: 0.75rem" id="s7-note">
+          Since no data is sent to us, there is no server-side data for us to
+          delete on your behalf.
+        </p>
+      </section>
+
+      <!-- 8. Changes -->
+      <section class="card" id="s8">
+        <div class="card-header">
+          <div class="card-icon">📝</div>
+          <h2 id="s8-title">8. Changes to This Policy</h2>
+        </div>
+        <p id="s8-body">
+          We may update this Privacy Policy from time to time. Any changes will
+          be reflected on this page with an updated effective date. We encourage
+          you to review this page periodically. Continued use of the App after
+          any change constitutes your acceptance of the revised policy.
+        </p>
+      </section>
+
+      <!-- 9. Contact -->
+      <section class="card" id="s9">
+        <div class="card-header">
+          <div class="card-icon">📬</div>
+          <h2 id="s9-title">9. Contact Us</h2>
+        </div>
+        <p id="s9-body">
+          If you have any questions or concerns about this Privacy Policy,
+          please reach out:
+        </p>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <p class="contact-label">Email</p>
+            <p class="contact-value">
+              <a href="mailto:f36823.support@gmail.com"
+                >f36823.support@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026
+        <a href="https://supporteaf.netlify.app/" target="_blank" rel="noopener"
+          >EAF microservice</a
+        >. All rights reserved. &nbsp;·&nbsp; Carnet v0.0.1
+      </p>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════
+       TRANSLATIONS (JS)
+  ═══════════════════════════════════════════ -->
+    <script>
+      const translations = {
+        en: {
+          lang: "en",
+          dir: "ltr",
+          "pp-title": "Privacy Policy – <span>Carnet</span>",
+          "pp-subtitle": "Credit Book &amp; List Manager · by EAF microservice",
+          "pp-badge": "100 % Offline · No data collected",
+          "toc-label": "Contents",
+          "toc-list": `
+            <li><a href="#s1">Overview</a></li>
+            <li><a href="#s2">Information We Collect</a></li>
+            <li><a href="#s3">How Your Data Is Stored</a></li>
+            <li><a href="#s4">Permissions</a></li>
+            <li><a href="#s5">Third-Party Services</a></li>
+            <li><a href="#s6">Children's Privacy</a></li>
+            <li><a href="#s7">Your Rights</a></li>
+            <li><a href="#s8">Changes to This Policy</a></li>
+            <li><a href="#s9">Contact Us</a></li>`,
+
+          "s1-title": "1. Overview",
+          "s1-body":
+            '<strong>Carnet</strong> ("the App") is a credit-book and product-list manager built for shop owners and individuals. Your privacy is of utmost importance to us. This Privacy Policy explains what information the App accesses, how it is used, and the security measures in place to protect it.',
+          "s1-eff":
+            "<strong>Effective date:</strong> August 23 2026 &nbsp;|&nbsp; <strong>Version:</strong> 0.0.1",
+
+          "s2-title": "2. Information We Collect",
+          "s2-highlight":
+            "We do <strong>not</strong> collect, transmit, or share any personal information. Carnet works 100 % offline and never connects to the internet.",
+          "s2-body":
+            "The only data the App creates is the content <em>you</em> enter:",
+          "s2-list": `
+            <li>Client / credit list names you create</li>
+            <li>Product names and prices you enter inside lists</li>
+            <li>App language preference (English, Français, or العربية)</li>`,
+          "s2-note":
+            "All of this data is stored <strong>exclusively on your device</strong> and is never transmitted to any server.",
+
+          "s3-title": "3. How Your Data Is Stored",
+          "s3-body": "Carnet uses two on-device storage mechanisms:",
+          "s3-list": `
+            <li><strong>SQLite database (sqflite)</strong> – stores your credit lists and product entries inside the App's private sandbox. No other app can access this data.</li>
+            <li><strong>SharedPreferences</strong> – stores your selected language preference as a simple key-value pair.</li>`,
+          "s3-note":
+            "Both are protected by Android's standard app isolation. Uninstalling the App permanently deletes all data from your device.",
+
+          "s4-title": "4. App Permissions",
+          "s4-body":
+            "Carnet requests <strong>no special Android permissions</strong>. It does not ask for access to:",
+          "s4-list": `
+            <li>Camera, microphone, or contacts</li>
+            <li>Location (GPS or network-based)</li>
+            <li>Storage / media files</li>
+            <li>Internet / network connectivity</li>
+            <li>Notifications</li>`,
+
+          "s5-title": "5. Third-Party Services",
+          "s5-body":
+            "Carnet integrates <strong>no third-party SDKs, analytics tools, advertising networks, or crash-reporting services</strong>. The App uses only these open-source Flutter packages, all of which operate entirely on-device:",
+          "s5-list": `
+            <li><strong>sqflite</strong> – local SQLite database</li>
+            <li><strong>shared_preferences</strong> – lightweight local key-value store</li>
+            <li><strong>provider</strong> – in-memory state management (no I/O)</li>
+            <li><strong>animated_splash_screen</strong> – splash animation (UI only)</li>`,
+
+          "s6-title": "6. Children's Privacy",
+          "s6-body":
+            "Carnet does not knowingly collect any data from or about children under the age of 13 (or the applicable age of digital consent in your jurisdiction). Because no data is collected at all, the App is safe for users of any age.",
+
+          "s7-title": "7. Your Rights",
+          "s7-body":
+            "Because all data resides solely on your device, you have full and direct control:",
+          "s7-list": `
+            <li><strong>Access &amp; export</strong> – your data is stored in the App's private SQLite file on your device.</li>
+            <li><strong>Deletion</strong> – delete individual lists/products inside the App, or uninstall it to erase everything.</li>
+            <li><strong>Portability</strong> – root-access backups or Android's "Back up my data" option may include the App's data.</li>`,
+          "s7-note":
+            "Since no data is sent to us, there is no server-side data for us to delete on your behalf.",
+
+          "s8-title": "8. Changes to This Policy",
+          "s8-body":
+            "We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date. We encourage you to review this page periodically. Continued use of the App after any change constitutes your acceptance of the revised policy.",
+
+          "s9-title": "9. Contact Us",
+          "s9-body":
+            "If you have any questions or concerns about this Privacy Policy, please reach out:",
+        },
+
+        /* ─ French ─ */
+        fr: {
+          lang: "fr",
+          dir: "ltr",
+          "pp-title": "Politique de Confidentialité – <span>Carnet</span>",
+          "pp-subtitle":
+            "Gestionnaire de crédit et de listes · par EAF microservice",
+          "pp-badge": "100 % Hors ligne · Aucune donnée collectée",
+          "toc-label": "Sommaire",
+          "toc-list": `
+            <li><a href="#s1">Aperçu</a></li>
+            <li><a href="#s2">Informations collectées</a></li>
+            <li><a href="#s3">Stockage des données</a></li>
+            <li><a href="#s4">Permissions</a></li>
+            <li><a href="#s5">Services tiers</a></li>
+            <li><a href="#s6">Confidentialité des enfants</a></li>
+            <li><a href="#s7">Vos droits</a></li>
+            <li><a href="#s8">Modifications</a></li>
+            <li><a href="#s9">Nous contacter</a></li>`,
+
+          "s1-title": "1. Aperçu",
+          "s1-body":
+            "<strong>Carnet</strong> est une application de gestion de crédit et de listes destinée aux commerçants et aux particuliers. Votre vie privée est notre priorité. Cette politique explique quelles informations l'application accède, comment elles sont utilisées et les mesures de sécurité en place pour les protéger.",
+          "s1-eff":
+            "<strong>Date d'entrée en vigueur :</strong> 23 août 2026 &nbsp;|&nbsp; <strong>Version :</strong> 0.0.1",
+
+          "s2-title": "2. Informations collectées",
+          "s2-highlight":
+            "Nous ne collectons, ne transmettons ni ne partageons <strong>aucune</strong> information personnelle. Carnet fonctionne 100 % hors ligne et ne se connecte jamais à Internet.",
+          "s2-body":
+            "Les seules données créées par l'application sont celles que <em>vous</em> saisissez :",
+          "s2-list": `
+            <li>Noms des listes de crédit que vous créez</li>
+            <li>Noms de produits et prix saisis dans les listes</li>
+            <li>Préférence de langue (English, Français ou العربية)</li>`,
+          "s2-note":
+            "Toutes ces données sont stockées <strong>exclusivement sur votre appareil</strong> et ne sont jamais transmises à un serveur.",
+
+          "s3-title": "3. Stockage des données",
+          "s3-body": "Carnet utilise deux mécanismes de stockage local :",
+          "s3-list": `
+            <li><strong>Base de données SQLite (sqflite)</strong> – stocke vos listes et produits dans le bac à sable privé de l'application. Aucune autre application n'y a accès.</li>
+            <li><strong>SharedPreferences</strong> – stocke votre préférence de langue sous forme de paire clé-valeur simple.</li>`,
+          "s3-note":
+            "Les deux sont protégés par l'isolation standard des applications Android. La désinstallation supprime définitivement toutes les données.",
+
+          "s4-title": "4. Permissions",
+          "s4-body":
+            "Carnet ne demande <strong>aucune permission Android spéciale</strong>. Elle ne sollicite pas l'accès à :",
+          "s4-list": `
+            <li>Appareil photo, microphone ou contacts</li>
+            <li>Localisation (GPS ou réseau)</li>
+            <li>Stockage / fichiers média</li>
+            <li>Internet / connectivité réseau</li>
+            <li>Notifications</li>`,
+
+          "s5-title": "5. Services tiers",
+          "s5-body":
+            "Carnet n'intègre <strong>aucun SDK tiers, outil d'analyse, réseau publicitaire ou service de signalement de pannes</strong>. L'application utilise uniquement ces packages Flutter open-source, tous fonctionnant entièrement sur l'appareil :",
+          "s5-list": `
+            <li><strong>sqflite</strong> – base de données SQLite locale</li>
+            <li><strong>shared_preferences</strong> – stockage clé-valeur léger</li>
+            <li><strong>provider</strong> – gestion d'état en mémoire (aucun I/O)</li>
+            <li><strong>animated_splash_screen</strong> – animation de démarrage (UI uniquement)</li>`,
+
+          "s6-title": "6. Confidentialité des enfants",
+          "s6-body":
+            "Carnet ne collecte sciemment aucune donnée concernant des enfants de moins de 13 ans (ou l'âge de consentement numérique applicable dans votre juridiction). Comme aucune donnée n'est collectée, l'application est sûre pour tous les âges.",
+
+          "s7-title": "7. Vos droits",
+          "s7-body":
+            "Toutes les données résidant uniquement sur votre appareil, vous en avez le contrôle total :",
+          "s7-list": `
+            <li><strong>Accès et export</strong> – vos données sont dans le fichier SQLite privé de l'application sur votre appareil.</li>
+            <li><strong>Suppression</strong> – supprimez des listes/produits dans l'application, ou désinstallez-la pour tout effacer.</li>
+            <li><strong>Portabilité</strong> – les sauvegardes Android peuvent inclure les données de l'application.</li>`,
+          "s7-note":
+            "Aucune donnée ne nous étant envoyée, il n'y a aucune donnée côté serveur à supprimer en votre nom.",
+
+          "s8-title": "8. Modifications",
+          "s8-body":
+            "Nous pouvons mettre à jour cette Politique de Confidentialité. Toute modification sera reflétée sur cette page avec une date de mise à jour. Nous vous encourageons à consulter cette page régulièrement. L'utilisation continue de l'application après toute modification vaut acceptation.",
+
+          "s9-title": "9. Nous contacter",
+          "s9-body":
+            "Pour toute question concernant cette Politique de Confidentialité, veuillez nous contacter :",
+        },
+
+        /* ─ Arabic ─ */
+        ar: {
+          lang: "ar",
+          dir: "rtl",
+          "pp-title": "سياسة الخصوصية – <span>Carnet</span>",
+          "pp-subtitle":
+            "مدير دفتر الائتمان والقوائم · بواسطة EAF microservice",
+          "pp-badge": "١٠٠٪ بدون إنترنت · لا يتم جمع أي بيانات",
+          "toc-label": "المحتويات",
+          "toc-list": `
+            <li><a href="#s1">نظرة عامة</a></li>
+            <li><a href="#s2">المعلومات التي نجمعها</a></li>
+            <li><a href="#s3">كيفية تخزين بياناتك</a></li>
+            <li><a href="#s4">الأذونات</a></li>
+            <li><a href="#s5">خدمات الجهات الخارجية</a></li>
+            <li><a href="#s6">خصوصية الأطفال</a></li>
+            <li><a href="#s7">حقوقك</a></li>
+            <li><a href="#s8">تغييرات على هذه السياسة</a></li>
+            <li><a href="#s9">اتصل بنا</a></li>`,
+
+          "s1-title": "١. نظرة عامة",
+          "s1-body":
+            "<strong>Carnet</strong> هو تطبيق لإدارة قوائم الائتمان والمنتجات مصمم لأصحاب المتاجر والأفراد. خصوصيتك في غاية الأهمية بالنسبة لنا. توضح سياسة الخصوصية هذه المعلومات التي يصل إليها التطبيق وكيفية استخدامها وإجراءات الأمان المتخذة لحمايتها.",
+          "s1-eff":
+            "<strong>تاريخ السريان:</strong> ٢٣ أغسطس ٢٠٢٦ &nbsp;|&nbsp; <strong>الإصدار:</strong> 0.0.1",
+
+          "s2-title": "٢. المعلومات التي نجمعها",
+          "s2-highlight":
+            "<strong>لا</strong> نجمع أو نرسل أو نشارك أي معلومات شخصية. يعمل Carnet بنسبة ١٠٠٪ بدون إنترنت ولا يتصل بالشبكة مطلقًا.",
+          "s2-body":
+            "البيانات الوحيدة التي ينشئها التطبيق هي المحتوى الذي <em>تُدخله أنت</em>:",
+          "s2-list": `
+            <li>أسماء قوائم الائتمان التي تُنشئها</li>
+            <li>أسماء المنتجات وأسعارها التي تُدخلها في القوائم</li>
+            <li>تفضيل اللغة (English أو Français أو العربية)</li>`,
+          "s2-note":
+            "جميع هذه البيانات مخزّنة <strong>حصريًا على جهازك</strong> ولا تُرسَل أبدًا إلى أي خادم.",
+
+          "s3-title": "٣. كيفية تخزين بياناتك",
+          "s3-body": "يستخدم Carnet آليتَي تخزين محليتَين:",
+          "s3-list": `
+            <li><strong>قاعدة بيانات SQLite (sqflite)</strong> – تخزّن قوائمك وبيانات منتجاتك داخل البيئة المحمية الخاصة بالتطبيق. لا يمكن لأي تطبيق آخر الوصول إلى هذه البيانات.</li>
+            <li><strong>SharedPreferences</strong> – تخزّن تفضيل اللغة المُختار كزوج مفتاح-قيمة بسيط.</li>`,
+          "s3-note":
+            "كلاهما محمي بعزل التطبيقات القياسي في Android. تؤدي إزالة التطبيق إلى حذف جميع البيانات نهائيًا من جهازك.",
+
+          "s4-title": "٤. أذونات التطبيق",
+          "s4-body":
+            "لا يطلب Carnet <strong>أي أذونات Android خاصة</strong>. ولا يطلب الوصول إلى:",
+          "s4-list": `
+            <li>الكاميرا أو الميكروفون أو جهات الاتصال</li>
+            <li>الموقع الجغرافي (GPS أو شبكة)</li>
+            <li>التخزين / ملفات الوسائط</li>
+            <li>الإنترنت / الاتصال بالشبكة</li>
+            <li>الإشعارات</li>`,
+
+          "s5-title": "٥. خدمات الجهات الخارجية",
+          "s5-body":
+            "لا يدمج Carnet <strong>أي SDK لجهات خارجية أو أدوات تحليلية أو شبكات إعلانية أو خدمات إبلاغ عن الأعطال</strong>. يستخدم التطبيق فقط هذه الحزم مفتوحة المصدر، وتعمل جميعها كليًا على الجهاز:",
+          "s5-list": `
+            <li><strong>sqflite</strong> – قاعدة بيانات SQLite محلية</li>
+            <li><strong>shared_preferences</strong> – مخزن خفيف للمفتاح-القيمة</li>
+            <li><strong>provider</strong> – إدارة الحالة في الذاكرة (بدون I/O)</li>
+            <li><strong>animated_splash_screen</strong> – رسوم متحركة عند التشغيل (واجهة مستخدم فقط)</li>`,
+
+          "s6-title": "٦. خصوصية الأطفال",
+          "s6-body":
+            "لا يجمع Carnet عن قصد أي بيانات من الأطفال دون سن ١٣ عامًا (أو سن الموافقة الرقمية المعمول به في ولايتك القضائية). ولأنه لا يُجمَع أي بيانات على الإطلاق، فإن التطبيق آمن لجميع الفئات العمرية.",
+
+          "s7-title": "٧. حقوقك",
+          "s7-body":
+            "بما أن جميع البيانات موجودة فقط على جهازك، فلديك سيطرة كاملة ومباشرة:",
+          "s7-list": `
+            <li><strong>الوصول والتصدير</strong> – بياناتك مخزّنة في ملف SQLite الخاص بالتطبيق على جهازك.</li>
+            <li><strong>الحذف</strong> – احذف القوائم والمنتجات داخل التطبيق، أو أزِل التطبيق لمحو كل شيء.</li>
+            <li><strong>قابلية النقل</strong> – قد تتضمن نسخ الاحتياطي من Android بيانات التطبيق.</li>`,
+          "s7-note":
+            "بما أنه لا تُرسَل إلينا أي بيانات، فلا توجد بيانات على الخادم لنحذفها نيابةً عنك.",
+
+          "s8-title": "٨. تغييرات على هذه السياسة",
+          "s8-body":
+            "قد نُحدّث سياسة الخصوصية هذه من وقت لآخر. ستنعكس أي تغييرات على هذه الصفحة بتاريخ سريان محدّث. نشجعك على مراجعة هذه الصفحة بشكل دوري. الاستمرار في استخدام التطبيق بعد أي تغيير يعني قبولك للسياسة المُعدَّلة.",
+
+          "s9-title": "٩. اتصل بنا",
+          "s9-body":
+            "إذا كان لديك أي أسئلة أو مخاوف بشأن سياسة الخصوصية هذه، يرجى التواصل معنا:",
+        },
+      };
+
+      /* keys that are innerHTML (allow HTML tags inside) */
+      const htmlKeys = new Set([
+        "pp-title",
+        "s1-body",
+        "s1-eff",
+        "s2-highlight",
+        "s2-body",
+        "s2-note",
+        "s3-body",
+        "s3-note",
+        "s4-body",
+        "s5-body",
+        "s7-body",
+        "s7-note",
+        "toc-list",
+        "s2-list",
+        "s3-list",
+        "s4-list",
+        "s5-list",
+        "s7-list",
+      ]);
+
+      function setLang(code) {
+        const t = translations[code];
+        if (!t) return;
+
+        /* update html dir/lang */
+        document.documentElement.lang = t.lang;
+        document.documentElement.dir = t.dir;
+
+        /* update each translated element */
+        for (const [key, val] of Object.entries(t)) {
+          if (key === "lang" || key === "dir") continue;
+          const el = document.getElementById(key);
+          if (!el) continue;
+          if (htmlKeys.has(key)) el.innerHTML = val;
+          else el.textContent = val;
+        }
+
+        /* update button state */
+        document.querySelectorAll(".lang-btn").forEach((btn) => {
+          btn.classList.toggle(
+            "active",
+            btn.textContent.trim().toLowerCase() === code,
+          );
+        });
+      }
+    </script>
+  </body>
+</html>
